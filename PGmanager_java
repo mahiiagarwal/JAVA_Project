@@ -24,7 +24,7 @@ public class PGManager {
             if (r.getId() == id) {
                 r.setPhone(newPhone);
                 r.setRoomNumber(newRoom);
-                System.out.println("✔ Resident details updated!");
+                System.out.println("Resident details updated!");
                 return;
             }
         }
