@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+
+public class PGManager {
+
+    private ArrayList<Resident> residents = new ArrayList<>();
+
+    public void addResident(Resident r) {
+        residents.add(r);
+        System.out.println("✔ Resident added successfully!");
+    }
+
+    public void viewResidents() {
+        if (residents.isEmpty()) {
+            System.out.println("No residents found!");
+            return;
+        }
+        for (Resident r : residents) {
+            System.out.println(r);
+        }
+    }
+
+    public void updateResident(int id, String newPhone, String newRoom) {
+        for (Resident r : residents) {
+            if (r.getId() == id) {
+                r.setPhone(newPhone);
+                r.setRoomNumber(newRoom);
+                System.out.println("✔ Resident details updated!");
+                return;
+            }
+        }
+        System.out.println("❌ Resident not found!");
+    }
+
+    public void removeResident(int id) {
+        residents.removeIf(r -> r.getId() == id);
+        System.out.println("✔ Resident removed successfully!");
+    }
+}
