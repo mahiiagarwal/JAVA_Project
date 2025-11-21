@@ -28,7 +28,7 @@ public class PGManager {
                 return;
             }
         }
-        System.out.println("❌ Resident not found!");
+        System.out.println("Resident not found!");
     }
 
     public void removeResident(int id) {
