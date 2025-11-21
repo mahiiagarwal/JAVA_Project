@@ -6,7 +6,7 @@ public class PGManager {
 
     public void addResident(Resident r) {
         residents.add(r);
-        System.out.println("✔ Resident added successfully!");
+        System.out.println("Resident added successfully!");
     }
 
     public void viewResidents() {
@@ -33,6 +33,6 @@ public class PGManager {
 
     public void removeResident(int id) {
         residents.removeIf(r -> r.getId() == id);
-        System.out.println("✔ Resident removed successfully!");
+        System.out.println("Resident removed successfully!");
     }
 }
